@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="client.js"></script>
+    <script src="jquery-3.2.0.js"></script>
+</head>
+
+<h1>Variant</h1>
+{{#each row2 as |i|}}
+    <div>
+        <input type="submit" id="{{i._id}}" value="{{i.Variant}}" onclick="changecar(this)"></input>
+    </div>
+{{/each}}
+<h3>Price</h3>
+<form action="/pricecheckbox" method="get">
+<input type="submit" id="checkbox1" onclick="checkboxid(this)">Petrol
+<input type="submit" id="checkbox2" onclick="checkboxid(this)">Diesel
+<input type="submit" id="checkbox3" onclick="checkboxid(this)">CNG
+</form>
+</body>
+</html>
